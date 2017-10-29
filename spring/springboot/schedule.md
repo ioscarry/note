@@ -77,9 +77,9 @@ public class ScheduledTask implements SchedulingConfigurer {
 
 # 问题
 
-设置线程池为3，  
-添加60000个crontask，定时1秒，每个crontask中休眠1分钟  
-dump堆，没发现特殊情况  
+设置线程池为3，
 
+添加60000个crontask，定时1秒，每个crontask中休眠1分钟
 
+dump堆，没发现特殊情况
 

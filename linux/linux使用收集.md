@@ -111,14 +111,23 @@ sed -i 's/123/456/g' file.txt # 直接修改原文件
 
 ## 脚本
 
-[根据svn日志提取补丁包](https://files.cnblogs.com/files/chencye/extractBySvnLog.sh)  
-[md5生成与校验]()  
-[tomcat重启]()  
-[tomcat检查]()  
-[tomcat停止]()  
-[jar程序重启]()  
-[jar程序检查]()  
-[jar程序停止]()  
+[根据svn日志提取补丁包](https://files.cnblogs.com/files/chencye/extractBySvnLog.sh)
+
+[md5生成与校验]()
+
+[tomcat重启]()
+
+[tomcat检查]()
+
+[tomcat停止]()
+
+[jar程序重启]()
+
+[jar程序检查]()
+
+[jar程序停止]()
+
+
 
 # 软件安装
 
@@ -160,10 +169,14 @@ yum clean all    # 清除缓存目录下的软件包及旧的headers
 
 使用root账号登录  
 
-用`nmtui`命令进入 Network Manager  
-选择`Edit a connection`  
-选择`Edit`进入DHCP配置  
-选择`IPv4 CONFIGURATION`为`Automatic`，并且勾选`Automatically connect`选项  
+用`nmtui`命令进入 Network Manager 
+
+选择`Edit a connection` 
+
+选择`Edit`进入DHCP配置 
+
+选择`IPv4 CONFIGURATION`为`Automatic`，并且勾选`Automatically connect`选项 
+
 最后返回命令行，输入: `service network restart`  
 
 测试：`ping baidu.com`  
@@ -224,24 +237,38 @@ echo "set expandtab" >> ~/.vimrc
 ## 配置PS1提示符定义
 
 `vi ~/.bashrc`  
+
 `PS1="\[\e[32;1m\][\u@\h \w]$\[\e[m\]"`  
+
 `export PS1`  
 
-`\d`：代表日期，格式为weekday month date，例如："Mon Aug 1"  
-`\H`：完整的主机名称。例如：我的机器名称为：fc4.linux，则这个名称就是fc4.linux  
-`\h`：仅取主机的第一个名字，如上例，则为fc4，.linux则被省略  
-`\t`：显示时间为24小时格式，如：HH：MM：SS  
-`\T`：显示时间为12小时格式  
-`\A`：显示时间为24小时格式：HH：MM  
-`\u`：当前用户的账号名称  
-`\v`：BASH的版本信息  
-`\w`：完整的工作目录名称。家目录会以 ~代替  
-`\W`：利用basename取得工作目录名称，所以只会列出最后一个目录  
-`\#`：下达的第几个命令  
+`\d`：代表日期，格式为weekday month date，例如："Mon Aug 1" 
 
-设置字符序列颜色的格式为：`\[\e[F;Bm\]`  
-其中`F`为字体颜色，编号30~37；`B`为背景色，编号40~47  
-可通过`\e[0m`关闭颜色输出；特别的，当B为1时，将显示加亮加粗的文字  
+`\H`：完整的主机名称。例如：我的机器名称为：fc4.linux，则这个名称就是fc4.linux 
+
+`\h`：仅取主机的第一个名字，如上例，则为fc4，.linux则被省略
+
+`\t`：显示时间为24小时格式，如：HH：MM：SS
+
+`\T`：显示时间为12小时格式
+
+`\A`：显示时间为24小时格式：HH：MM
+
+`\u`：当前用户的账号名称
+
+`\v`：BASH的版本信息
+
+`\w`：完整的工作目录名称。家目录会以 ~代替
+
+`\W`：利用basename取得工作目录名称，所以只会列出最后一个目录
+
+`\#`：下达的第几个命令
+
+设置字符序列颜色的格式为：`\[\e[F;Bm\]`
+
+其中`F`为字体颜色，编号30~37；`B`为背景色，编号40~47
+
+可通过`\e[0m`关闭颜色输出；特别的，当B为1时，将显示加亮加粗的文字
 
 颜色表与代码表  
 
@@ -258,7 +285,7 @@ echo "set expandtab" >> ~/.vimrc
 
 # 时间同步
 
-<http://www.jianshu.com/p/fb32239ccf2b>  
+<http://www.jianshu.com/p/fb32239ccf2b>
 
 ```bash
 su root
