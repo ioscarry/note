@@ -1,29 +1,44 @@
-[TOC]
+
+- [outline.sh](./outline.sh)
+- [push.sh](./push.sh)
+- [README.md](./README.md)
+- [temp.md](./temp.md)
+- [todo.md](./todo.md)
 
 # database
 
-- 2017.10.19 [redis入门](database/redis入门.md)
-
-
+- [redis入门.md](./database/redis入门.md)
 
 # linux
 
-- 2017.03.21 [linux使用收集](linux/linux使用收集.md)
-- 2017.06.23 [centos7安装ftp](linux/centos7安装ftp.md)
+- [centos7安装ftp.md](./linux/centos7安装ftp.md)
+- [centos最小化安装.md](./linux/centos最小化安装.md)
+- [docker入门.md](./linux/docker入门.md)
+- [linux使用收集.md](./linux/linux使用收集.md)
+
+# python
+
+- [python-learning.md](./python/python-learning.md)
+
+# server
+
+- [nginx.md](./server/nginx.md)
+- [tomcat.md](./server/tomcat.md)
 
 # spring
 
-## springboot
 
-- 2017.10.01 [schedule](spring/springboot/schedule.md)
+# spring/springboot
 
-## springcloud
+- [schedule.md](./spring/springboot/schedule.md)
 
-- 2017.10.29 [配置客户端](spring/springcloud/Spring Cloud 系列（二）配置客户端.md)
+# spring/springcloud
+
+- [Spring Cloud 系列（二）配置客户端.md](./spring/springcloud/Spring Cloud 系列（二）配置客户端.md)
+- [Spring Cloud 系列（三）配置服务器.md](./spring/springcloud/Spring Cloud 系列（三）配置服务器.md)
 
 # tools
 
-- 2017.09.11 [windows7注册表](tools/windows7注册表.md)
-- 2017.10.29 [IDEA使用](tools/IDEA使用.md)
-
-
+- [IntelliJ IDEA.md](./tools/IntelliJ IDEA.md)
+- [windows7注册表.md](./tools/windows7注册表.md)
+- [工具收藏.md](./tools/工具收藏.md)
