@@ -21,7 +21,7 @@ while [[ ${#dirs[@]} > 0 ]]; do
         if [[ -d ${file} ]]; then
             subDirs=(${subDirs[@]} ${file})  # push
         else
-            echo "- [${file##*/}](${file})" >> README.md
+            echo "- [${file##*/}](${file// /%20})" >> README.md
         fi
     done
     dirs=(${subDirs[@]} ${dirs[@]})  # push

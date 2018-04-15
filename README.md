@@ -34,11 +34,11 @@
 
 # spring/springcloud
 
-- [Spring Cloud 系列（二）配置客户端.md](./spring/springcloud/Spring Cloud 系列（二）配置客户端.md)
-- [Spring Cloud 系列（三）配置服务器.md](./spring/springcloud/Spring Cloud 系列（三）配置服务器.md)
+- [Spring Cloud 系列（二）配置客户端.md](./spring/springcloud/Spring%20Cloud%20系列（二）配置客户端.md)
+- [Spring Cloud 系列（三）配置服务器.md](./spring/springcloud/Spring%20Cloud%20系列（三）配置服务器.md)
 
 # tools
 
-- [IntelliJ IDEA.md](./tools/IntelliJ IDEA.md)
+- [IntelliJ IDEA.md](./tools/IntelliJ%20IDEA.md)
 - [windows7注册表.md](./tools/windows7注册表.md)
 - [工具收藏.md](./tools/工具收藏.md)
