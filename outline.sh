@@ -18,9 +18,9 @@ while [[ ${#dirs[@]} > 0 ]]; do
         if [[ ! -e ${file} ]]; then
             continue
         fi
-        if [[ -d ${file} ]]; then
+        if [[ -d ${file} && ${file##*/} != 'assets' ]]; then
             subDirs=(${subDirs[@]} ${file})  # push
-        else
+        elif [[ -f ${file} ]]; then
             echo "- [${file##*/}](${file// /%20})" >> README.md
         fi
     done
