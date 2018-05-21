@@ -16,6 +16,7 @@
 - [centos最小化安装.md](./linux/centos最小化安装.md)
 - [docker入门.md](./linux/docker入门.md)
 - [linux使用收集.md](./linux/linux使用收集.md)
+- [putty.md](./linux/putty.md)
 
 # python
 
