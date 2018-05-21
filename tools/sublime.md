@@ -2,13 +2,13 @@
 
 # 常用的快捷键
 
-四种 Goto ：
-Ctrl + P 文件定位
-Ctrl + ; 词语定位 #
-Ctrl + R 函数定位 @
-Ctrl + G 行号定位 :
+四种 Goto：
+- Ctrl + P 文件定位
+- Ctrl + ; 词语定位
+- Ctrl + R 函数定位
+- Ctrl + G 行号定位
 
-括号前后移动光标：Ctrl + M
+括号前后移动光标：`Ctrl + M`
 以单词为单位前后移动光标：Ctrl + Left/Right
 Ctrl+→ 向右单位性地移动光标，快速移动光标。
 重新打开刚刚关闭的标签页：Ctrl + Shift + T
@@ -21,7 +21,7 @@ Ctrl+→ 向右单位性地移动光标，快速移动光标。
 
 # 配置
 
-```
+```json
 {
     // 开启选中范围内搜索
     "auto_find_in_selection": true,
@@ -57,3 +57,7 @@ Ctrl+→ 向右单位性地移动光标，快速移动光标。
     "theme": "Soda Dark 3.sublime-theme",
 }
 ```
+
+# 插件
+
+sdf

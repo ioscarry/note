@@ -16,6 +16,6 @@
 
 后端：mybatis、springmvc、springsecurity、springboot等
 
-数据库：oracle11g
+数据库：`oracle11g`
 
 
