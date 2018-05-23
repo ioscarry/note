@@ -5,6 +5,15 @@
 
 # 密码登录bat脚本
 
+在`putty.exe`所在目录创建子目录
+
+文件命名： `xxx(username[password]@host).bat` 其中username为用户，password为密码，host为IP
+
+示例：
+
+- centos6.5(chencye[chen123]@192.168.1.101).bat
+- centos7(chencye@192.168.1.102).bat
+
 ```bash
 @echo off
 
@@ -21,10 +30,10 @@ call :last_index %filename% %char3% result3
 call :last_index %filename% %char4% result4
 call :last_index %filename% %char5% result5
 
-call :ani %result1% %result2% %result3% %result4% %result5% username password host
+if %result2% equ 0 (call :resolveWithoutPwd username password host) else (call :resolve username password host)
 goto startPutty
 
-:ani
+:resolve
 setlocal EnableDelayedExpansion
     set /a username_len=%result2%-%result1%-1
     set username=!filename:~%result1%,%username_len%!
@@ -32,7 +41,17 @@ setlocal EnableDelayedExpansion
     set password=!filename:~%result2%,%password_len%!
     set /a host_len=%result5%-%result4%-1
     set host=!filename:~%result4%,%host_len%!
-endlocal & set %6=%username% & set %7=%password% & set %8=%host%
+endlocal & set %1=%username% & set %2=%password% & set %3=%host%
+goto :EOF
+
+:resolveWithoutPwd
+setlocal EnableDelayedExpansion
+    set /a username_len=%result4%-%result1%-1
+    set username=!filename:~%result1%,%username_len%!
+    set /a host_len=%result5%-%result4%-1
+    set host=!filename:~%result4%,%host_len%!
+endlocal & set %1=%username% & set %2=%username% & set %3=%host%
+goto :EOF
 
 :strlen
 setlocal
@@ -68,5 +87,4 @@ goto :EOF
 :startPutty
 cd ..
 start putty.exe %host% -l %username% -pw %password%
-
 ```
