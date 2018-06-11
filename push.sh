@@ -6,6 +6,6 @@ git pull
 
 git add *
 
-git commit --amend
+git commit -m 'note'
 
 git push

@@ -21,11 +21,13 @@ Easy Mock 是一个可视化，并且能快速生成 模拟数据 的持久化�
 
 ```bash
 # 下载
-curl -o ~/download/node-v10.3.0-linux-x64.tar http://cdn.npm.taobao.org/dist/node/v10.3.0/node-v10.3.0-linux-x64.tar.xz
+# 版本太新会有问题
+# curl -o ~/download/node-v10.3.0-linux-x64.tar http://cdn.npm.taobao.org/dist/node/v10.3.0/node-v10.3.0-linux-x64.tar.xz
+curl -o ~/download/node-v8.11.2-linux-x64.tar.xz https://nodejs.org/dist/v8.11.2/node-v8.11.2-linux-x64.tar.xz
 
 # 配置环境变量
 vi /etc/profile
-export PATH=$PATH:/root/node/node-v10.3.0-linux-x64
+export PATH=$PATH:/root/node/node-v8.11.2-linux-x64/bin
 
 source /etc/profile
 node -v
@@ -51,7 +53,7 @@ curl -o ~/download/mongodb-linux-x86_64-rhel62-3.6.5.tgz https://fastdl.mongodb.
 
 # 配置环境变量
 vi /etc/profile
-export PATH=$PATH:/root/mongodb/mongodb-linux-x86_64-rhel70-3.6.5
+export PATH=$PATH:/root/mongodb/mongodb-linux-x86_64-rhel70-3.6.5/bin
 
 source /etc/profile
 mongod -v
@@ -95,8 +97,15 @@ cd easy-mock
 # 坑
 # node v10 需要修改package.json中postcss-cssnext版本为3.1.0
 
-npm install --unsafe-perm --verbose
-npm run dev
+npm install --verbose
+npm run build
+
+NODE_ENV=production
+nohup npm run start >> /root/easy-mock/easy-mock.log 2>&1 &
+
+# 使用pm2
+npm install pm2 -g
+NODE_ENV=production pm2 start app.js
 
 # 放开端口
 firewall-cmd --permanent --zone=public --add-port=7300/tcp
@@ -105,4 +114,17 @@ firewall-cmd --reload
 firewall-cmd --zone=public --list-ports
 
 curl http://localhost:7300
+```
+
+### pm2报错
+
+```bash
+# WARNING: No configurations found in configuration directory:/root/config
+cp -r config ~
+
+# WARNING: NODE_APP_INSTANCE value of '0' did not match any instance config file names.
+cp ~/config/production.json ~/config/production-0.json
+
+# Error: ENOENT: no such file or directory, open 'logs/2018-06-11-info.log'
+mkdir ~/logs
 ```
