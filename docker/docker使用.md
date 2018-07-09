@@ -1,3 +1,7 @@
+[TOC]
+
+[Docker — 从入门到实践](https://yeasy.gitbooks.io/docker_practice/content/)
+
 # 镜像加速
 
 [https://yq.aliyun.com/articles/29941](https://yq.aliyun.com/articles/29941)
@@ -15,15 +19,11 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-
-
 # docker run 与 start的区别
 
 docker run 只在第一次运行时使用，将镜像放到容器中，以后再次启动这个容器时，只需要使用命令docker start 即可。
 
 docker run相当于执行了两步操作：将镜像放入容器中（docker create）,然后将容器启动，使之变成运行时容器（docker start）。
-
-
 
 # 安装mysql
 
@@ -52,8 +52,6 @@ flush privileges;
 
 ```
 
-
-
 # 安装gitlab
 
 [https://docs.gitlab.com/omnibus/docker/](https://docs.gitlab.com/omnibus/docker/)
@@ -78,5 +76,35 @@ sudo docker run --detach \
     --volume /srv/gitlab/data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest
 
+```
+
+# 安装redis
+
+```bash
+docker pull redis
+docker run --name redis -d redis
+docker run --name redis --publish=6379:6379 -d redis
+# 放开端口
+firewall-cmd --permanent --zone=public --add-port=6379/tcp
+firewall-cmd --permanent --zone=public --remove-port=6379/tcp
+firewall-cmd --reload
+firewall-cmd --zone=public --list-ports
+
+```
+
+# 安装mongodb
+
+```bash
+# https://hub.docker.com/_/mongo/
+docker pull redis
+docker run --name mongo --publish=27017:27017 -d mongo
+# 进入monggodb并创建数据库
+mongo
+use easy-mock
+# 放开端口
+firewall-cmd --permanent --zone=public --add-port=27017/tcp
+firewall-cmd --permanent --zone=public --remove-port=27017/tcp
+firewall-cmd --reload
+firewall-cmd --zone=public --list-ports
 ```
 

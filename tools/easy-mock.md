@@ -23,11 +23,11 @@ Easy Mock 是一个可视化，并且能快速生成 模拟数据 的持久化�
 # 下载
 # 版本太新会有问题
 # curl -o ~/download/node-v10.3.0-linux-x64.tar http://cdn.npm.taobao.org/dist/node/v10.3.0/node-v10.3.0-linux-x64.tar.xz
-curl -o ~/download/node-v8.11.2-linux-x64.tar.xz https://nodejs.org/dist/v8.11.2/node-v8.11.2-linux-x64.tar.xz
+curl -o /usr/local/src/node-v8.11.2-linux-x64.tar.xz https://nodejs.org/dist/v8.11.2/node-v8.11.2-linux-x64.tar.xz
 
 # 配置环境变量
 vi /etc/profile
-export PATH=$PATH:/root/node/node-v8.11.2-linux-x64/bin
+export PATH=$PATH:/usr/local/node-v8.11.2-linux-x64/bin
 
 source /etc/profile
 node -v
@@ -35,8 +35,11 @@ npm -v
 
 # 设置国内镜像
 npm config set registry https://registry.npm.taobao.org
-npm config set prefix "/root/node/modules_global"
-npm config set cache "/root/node/cache"
+npm config set prefix "/var/local/node/modules_global"
+npm config set cache "/var/cache/node"
+
+export PATH=$PATH:/var/local/node/modules_global/bin
+
 # 查看配置
 npm config list
 
@@ -93,6 +96,7 @@ git -v
 ```bash
 git clone https://github.com/easy-mock/easy-mock.git
 cd easy-mock
+curl -o /usr/local/src/easy-mock-1.6.0.tar.gz https://codeload.github.com/easy-mock/easy-mock/tar.gz/v1.6.0
 
 # 坑
 # node v10 需要修改package.json中postcss-cssnext版本为3.1.0
@@ -105,7 +109,10 @@ nohup npm run start >> /root/easy-mock/easy-mock.log 2>&1 &
 
 # 使用pm2
 npm install pm2 -g
+cd /usr/local/src/easy-mock-1.6.0
 NODE_ENV=production pm2 start app.js
+pm2 ls
+pm2 stop app
 
 # 放开端口
 firewall-cmd --permanent --zone=public --add-port=7300/tcp
