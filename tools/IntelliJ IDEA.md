@@ -1,3 +1,14 @@
+[TOC]
+
+# code style
+
+```
+1. Wrapping and Braces -- Enum constants -- Wrap always
+2. javadoc -- Do not wrap one line comments
+```
+
+
+
 # 快捷键
 
 
@@ -38,37 +49,37 @@
 `idea.cycle.buffer.size=1024`，该属性主要用于控制控制台输出缓存。有遇到一些项目开启很多输出，控制台很快就被刷满了没办法再自动输出后面内容，这种项目建议增大该值或是直接禁用掉，禁用语句`idea.cycle.buffer.size=disabled`。
 
 1. 设置主题
-  `Settings | Appearance & Behavior | Appearance`
+    `Settings | Appearance & Behavior | Appearance`
 
 2. 不自更新
-  `Settings | Appearance & Behavior | System Settings | Updates`
+    `Settings | Appearance & Behavior | System Settings | Updates`
 
 3. 设置字体
-  `Settings | Editor | Colors & Fonts | Font`  Colsolas 16
-  `Settings | Editor | Colors & Fonts | Console Font`
+    `Settings | Editor | Colors & Fonts | Font`  Colsolas 16
+    `Settings | Editor | Colors & Fonts | Console Font`
 
 4. 设置github账号
-  `Settings | Version Control | GitHub`
+    `Settings | Version Control | GitHub`
 
 5. 设置Maven
-  `Settings | Build,Execution,Deployment | Build Tools | Maven`
-  设置 Maven home directory 为绝对路径地址
-  设置 User settings file为Maven home下的conf/settings.xml配置
-  设置 User settings file 与 Local repository 为Override
-  `Settings | Build,Execution,Deployment | Build Tools | Maven | Importing`
-  设置自动下载源码及文档
+    `Settings | Build,Execution,Deployment | Build Tools | Maven`
+    设置 Maven home directory 为绝对路径地址
+    设置 User settings file为Maven home下的conf/settings.xml配置
+    设置 User settings file 与 Local repository 为Override
+    `Settings | Build,Execution,Deployment | Build Tools | Maven | Importing`
+    设置自动下载源码及文档
 
 6. 设置diff为Beyond Compared
 
 7. 不显示`.idea`与`iml`文件
-  `Settings | Editor | File Types --> Ingore files and folders`
-  在后面添加 `*.idea;*.iml;`
+    `Settings | Editor | File Types --> Ingore files and folders`
+    在后面添加 `*.idea;*.iml;`
 
 8. 设置默认换行格式
-  `Settings | Editor | Code Style --> Line Separator`
+    `Settings | Editor | Code Style --> Line Separator`
 
 9. 设置propeties文件默认编码为UTF-8
-  `Settings | Editor | File Encodings `
+    `Settings | Editor | File Encodings `
 
 10. 安装markdown插件
 [IntelliJ IDEA Multi-MarkDown插件安装破J全过程](http://www.jianshu.com/p/a0550f81cbd1)

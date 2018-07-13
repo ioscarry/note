@@ -78,6 +78,8 @@ git remote -v
 git remote add main http://github.com/main.git
 git remote set-url --push main no-push
 
+git branch --unset-upstream
+
 # 创建并切换到新分支
 git checkout -b newBranchName
 
