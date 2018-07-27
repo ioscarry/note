@@ -2,8 +2,15 @@
 - [outline.sh](./outline.sh)
 - [push.sh](./push.sh)
 - [README.md](./README.md)
+- [sftp-config.json](./sftp-config.json)
 - [temp.md](./temp.md)
 - [todo.md](./todo.md)
+
+# 00
+
+
+# rk
+
 
 # database
 
@@ -18,8 +25,9 @@
 
 - [centos7安装ftp.md](./linux/centos7安装ftp.md)
 - [centos最小化安装.md](./linux/centos最小化安装.md)
-- [docker入门.md](./linux/docker入门.md)
+- [linux软件安装.md](./linux/linux软件安装.md)
 - [linux使用收集.md](./linux/linux使用收集.md)
+- [linux组用户权限.md](./linux/linux组用户权限.md)
 - [putty.md](./linux/putty.md)
 
 # python
@@ -36,12 +44,15 @@
 
 # spring/springboot
 
+- [demo.md](./spring/springboot/demo.md)
+- [mybatis.md](./spring/springboot/mybatis.md)
 - [schedule.md](./spring/springboot/schedule.md)
 
 # spring/springcloud
 
 - [Spring Cloud 系列（二）配置客户端.md](./spring/springcloud/Spring%20Cloud%20系列（二）配置客户端.md)
 - [Spring Cloud 系列（三）配置服务器.md](./spring/springcloud/Spring%20Cloud%20系列（三）配置服务器.md)
+- [zuul.md](./spring/springcloud/zuul.md)
 
 # tools
 
@@ -51,6 +62,7 @@
 - [IntelliJ IDEA.md](./tools/IntelliJ%20IDEA.md)
 - [sublime.md](./tools/sublime.md)
 - [swagger.md](./tools/swagger.md)
+- [windows.md](./tools/windows.md)
 - [windows7注册表.md](./tools/windows7注册表.md)
 - [工具收藏.md](./tools/工具收藏.md)
 

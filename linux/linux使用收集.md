@@ -473,3 +473,15 @@ systemctl restart chronyd
 exit
 ```
 
+# 端口
+
+```bash
+# 放开端口
+firewall-cmd --permanent --zone=public --add-port=27017/tcp
+firewall-cmd --permanent --zone=public --remove-port=27017/tcp
+firewall-cmd --reload
+firewall-cmd --zone=public --list-ports
+# 开放一段端口
+firewall-cmd --permanent --zone=public --add-port=499-65534/tcp 
+```
+

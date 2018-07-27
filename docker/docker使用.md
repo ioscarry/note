@@ -12,6 +12,10 @@
 {
     "registry-mirrors": ["https://xghzrpf2.mirror.aliyuncs.com"]
 }
+或 docker有官方的中国区加速器
+{
+    "registry-mirrors": ["https://registry.docker-cn.com"]
+}
 ```
 
 ```bash
@@ -64,18 +68,19 @@ docker images
 
 # 启动需要几分钟，未启动完毕，会显示
 # 5002 GitLab is taking too much time to respond
-sudo docker stop fc87abc3cd6c
-sudo docker container rm gitlab
-sudo docker run --detach \
-    --publish 8080:80 \
-    --publish 1122:22 \
-    --name gitlab \
-    --restart always \
-    --volume /srv/gitlab/config:/etc/gitlab \
-    --volume /srv/gitlab/logs:/var/log/gitlab \
-    --volume /srv/gitlab/data:/var/opt/gitlab \
-    gitlab/gitlab-ce:latest
-
+docker stop gitlab
+docker rm gitlab
+docker run \
+  -d \
+  --restart always \
+  --name gitlab \
+  -p 10080:80 \
+  --env GITLAB_OMNIBUS_CONFIG="external_url 'http://10.48.78.172:10080/';" \
+  -v /srv/gitlab/config:/etc/gitlab \
+  -v /srv/gitlab/logs:/var/log/gitlab \
+  -v /srv/gitlab/data:/var/opt/gitlab \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  gitlab/gitlab-ce
 ```
 
 # 安装redis

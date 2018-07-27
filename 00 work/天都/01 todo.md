@@ -52,4 +52,5 @@
 
 # spring cloud
 
-- [ ] 
+- [ ] zuul
+
