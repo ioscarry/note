@@ -10,8 +10,8 @@
 # 工具环境
 
 - [x] 桩 easy-mock
-- [ ] nexus
-- [ ] redis
+- [x] nexus
+- [x] redis
 
 
 
@@ -25,7 +25,7 @@
 
 # 工程
 
-- [ ] TdPortal -- zuul
+- [x] TdPortal -- zuul
 
 
 - [x] TdSystemService
@@ -52,5 +52,11 @@
 
 # spring cloud
 
-- [ ] zuul
+- [ ] 登录
+- [x] 缓存
+- [ ] docker ip
+- [ ] 生产环境获取docker镜像
+
+- [ ] 日志
+- [ ] 跟踪
 

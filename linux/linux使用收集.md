@@ -15,6 +15,8 @@ ps -ef | grep -v 'grep' | grep 'tomcat'
 
 # 查看端口是否被占用
 netstat -na | grep 8080
+# 查看端口被哪个进程占用
+lsof -i:8080
 
 # 查看磁盘空间使用情况
 df -lh
