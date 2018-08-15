@@ -1,3 +1,5 @@
+[TOC]
+
 # 安装
 
 [http://www.centos.org](http://www.centos.org/) 中下载`Minimal ISO`

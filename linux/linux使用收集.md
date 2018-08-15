@@ -39,6 +39,8 @@ find . -name "*.tmp" -exec rm -rf {} \;
 # 查找大文件
 find . -size +10M -exec ls -lh {} \;
 
+# yum查询软件版本
+yum list docker-ce --showduplicates | sort -r
 ```
 
 # 解压缩
