@@ -25,6 +25,7 @@
 
 - [centos7安装ftp.md](./linux/centos7安装ftp.md)
 - [centos最小化安装.md](./linux/centos最小化安装.md)
+- [linux定时器crontab.md](./linux/linux定时器crontab.md)
 - [linux软件安装.md](./linux/linux软件安装.md)
 - [linux使用收集.md](./linux/linux使用收集.md)
 - [linux组用户权限.md](./linux/linux组用户权限.md)
