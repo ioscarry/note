@@ -21,7 +21,7 @@ lsof -i:8080
 # 查看磁盘空间使用情况
 df -lh
 # 统计当前目录下，所有文件(包括文件夹)大小
-du -smh *
+du -smh * | sort -r
 
 # 下载文件
 curl -o ~/download/jdk.tar.gz http://download.oracle.com/jdk.tar.gz
@@ -480,6 +480,7 @@ exit
 # 端口
 
 ```bash
+netstat -tapen
 # 放开端口
 firewall-cmd --permanent --zone=public --add-port=27017/tcp
 firewall-cmd --permanent --zone=public --remove-port=27017/tcp
@@ -487,5 +488,10 @@ firewall-cmd --reload
 firewall-cmd --zone=public --list-ports
 # 开放一段端口
 firewall-cmd --permanent --zone=public --add-port=499-65534/tcp 
+# 启动停止
+firewall-cmd --state
+systemctl start firewalld.service
+systemctl stop firewalld.service
+systemctl disable firewalld.service
 ```
 

@@ -30,6 +30,7 @@
 - [linux使用收集.md](./linux/linux使用收集.md)
 - [linux组用户权限.md](./linux/linux组用户权限.md)
 - [putty.md](./linux/putty.md)
+- [代理服务器与代理.md](./linux/代理服务器与代理.md)
 
 # python
 

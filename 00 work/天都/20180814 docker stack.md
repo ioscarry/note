@@ -24,10 +24,10 @@ if [[ ${networkcount} == 0 ]]; then
     docker network create --driver overlay tdapp
 fi
 
-docker stack deploy -c docker-stack-tdapp.yml tdapp
+docker stack deploy -c docker-tdapp.yml tdapp
 ```
 
-## docker-stack-tdapp.yml
+## docker-tdapp-base.yml
 
 ```yaml
 version: '3'
@@ -35,6 +35,8 @@ version: '3'
 services:
   tdservicecenter01:
     image: dev.app:5000/tdapp/tdservicecenter
+    volumes:
+      - /logs:/logs
     environment:
       - SERVER_PORT=7080
       - SPRING_PROFILES_ACTIVE=dev
@@ -53,6 +55,8 @@ services:
 
   tdservicecenter02:
     image: dev.app:5000/tdapp/tdservicecenter
+    volumes:
+      - /logs:/logs
     environment:
       - SERVER_PORT=7080
       - SPRING_PROFILES_ACTIVE=dev
@@ -70,6 +74,8 @@ services:
 
   tdservicecenter03:
     image: dev.app:5000/tdapp/tdservicecenter
+    volumes:
+      - /logs:/logs
     environment:
       - SERVER_PORT=7080
       - SPRING_PROFILES_ACTIVE=dev
@@ -100,6 +106,8 @@ services:
     depends_on:
       - tdservicecenter01
     image: dev.app:5000/tdapp/tdconfigcenter
+    volumes:
+      - /logs:/logs
     environment:
       - SERVER_PORT=7070
       - SPRING_PROFILES_ACTIVE=dev
@@ -116,10 +124,27 @@ services:
       restart_policy:
         condition: on-failure
 
+networks:
+  tdapp:
+    external:
+      name: tdapp
+
+```
+
+
+
+## docker-tdapp.yml
+
+```yaml
+version: '3'
+
+services:
   tdportal:
     depends_on:
       - tdconfigcenter
     image: dev.app:5000/tdapp/tdportal
+    volumes:
+      - /logs:/logs
     environment:
       - SERVER_PORT=8080
       - SPRING_PROFILES_ACTIVE=dev
@@ -142,6 +167,8 @@ services:
     depends_on:
       - tdconfigcenter
     image: dev.app:5000/tdapp/tdsystemservice
+    volumes:
+      - /logs:/logs
     environment:
       - SERVER_PORT=8081
       - SPRING_PROFILES_ACTIVE=dev
@@ -164,6 +191,8 @@ services:
     depends_on:
       - tdconfigcenter
     image: dev.app:5000/tdapp/tdappservice
+    volumes:
+      - /logs:/logs
     environment:
       - SERVER_PORT=8082
       - SPRING_PROFILES_ACTIVE=dev
@@ -234,3 +263,4 @@ docker service logs -f --tail 100 tdapp_tdportal
 docker service rm tdapp_tdportal
 
 ```
+
