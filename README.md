@@ -2,15 +2,8 @@
 - [outline.sh](./outline.sh)
 - [push.sh](./push.sh)
 - [README.md](./README.md)
-- [sftp-config.json](./sftp-config.json)
 - [temp.md](./temp.md)
 - [todo.md](./todo.md)
-
-# 00
-
-
-# rk
-
 
 # database
 
@@ -71,3 +64,51 @@
 # vue
 
 - [vue-start.md](./vue/vue-start.md)
+
+# work
+
+- [服务注册选择.md](./work/服务注册选择.md)
+- [微服务框架.md](./work/微服务框架.md)
+
+# work/2018天都APP
+
+- [00 temp.md](./work/2018天都APP/00%20temp.md)
+- [01 todo.md](./work/2018天都APP/01%20todo.md)
+- [02 部署准备.md](./work/2018天都APP/02%20部署准备.md)
+- [20180713 环境信息.md](./work/2018天都APP/20180713%20环境信息.md)
+- [20180716 auth.md](./work/2018天都APP/20180716%20auth.md)
+- [20180723 cicd.md](./work/2018天都APP/20180723%20cicd.md)
+- [20180725 jenkins install.md](./work/2018天都APP/20180725%20jenkins%20install.md)
+- [20180727 gitlab.md](./work/2018天都APP/20180727%20gitlab.md)
+- [20180727 sonar.md](./work/2018天都APP/20180727%20sonar.md)
+- [20180730 dockerfile.md](./work/2018天都APP/20180730%20dockerfile.md)
+- [20180801 git配置仓库.md](./work/2018天都APP/20180801%20git配置仓库.md)
+- [20180802 docker启动服务.md](./work/2018天都APP/20180802%20docker启动服务.md)
+- [20180803 nexus.md](./work/2018天都APP/20180803%20nexus.md)
+- [20180806 redis发布与订阅.md](./work/2018天都APP/20180806%20redis发布与订阅.md)
+- [20180806 登录.md](./work/2018天都APP/20180806%20登录.md)
+- [20180808 consul.md](./work/2018天都APP/20180808%20consul.md)
+- [20180808 配置静态IP与hostname.md](./work/2018天都APP/20180808%20配置静态IP与hostname.md)
+- [20180809 docker集群问题.md](./work/2018天都APP/20180809%20docker集群问题.md)
+- [20180810 docker集群部署.md](./work/2018天都APP/20180810%20docker集群部署.md)
+- [20180814 docker stack.md](./work/2018天都APP/20180814%20docker%20stack.md)
+- [20180816 elk.md](./work/2018天都APP/20180816%20elk.md)
+- [20180816 hystrix.md](./work/2018天都APP/20180816%20hystrix.md)
+- [20180820 nginx.md](./work/2018天都APP/20180820%20nginx.md)
+- [20180823 交接.md](./work/2018天都APP/20180823%20交接.md)
+
+# work/2018天都APP/wiki
+
+- [elk使用.md](./work/2018天都APP/wiki/elk使用.md)
+- [gitlab使用.md](./work/2018天都APP/wiki/gitlab使用.md)
+- [环境.md](./work/2018天都APP/wiki/环境.md)
+
+# work/2018天都APP/部署文档
+
+- [00 部署准备.md](./work/2018天都APP/部署文档/00%20部署准备.md)
+- [00 系统架构.md](./work/2018天都APP/部署文档/00%20系统架构.md)
+- [01 docker操作.md](./work/2018天都APP/部署文档/01%20docker操作.md)
+- [02 docker私有仓库.md](./work/2018天都APP/部署文档/02%20docker私有仓库.md)
+- [03 ELK日志系统.md](./work/2018天都APP/部署文档/03%20ELK日志系统.md)
+- [04 应用镜像发布.md](./work/2018天都APP/部署文档/04%20应用镜像发布.md)
+- [05 各应用配置说明.md](./work/2018天都APP/部署文档/05%20各应用配置说明.md)
