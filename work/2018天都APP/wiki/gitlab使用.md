@@ -4,7 +4,7 @@
 
 当前直接使用docker启动
 
-后续建议移出docker
+**后续建议移出docker**
 
 ```bash
 # 注意配置external_url后，容器启动的gitlab页面的仓库地址会使用10080端口
@@ -20,10 +20,5 @@ docker run --detach \
     --volume /srv/gitlab/data:/var/opt/gitlab \
     gitlab/gitlab-ce:latest
 ```
-
-
-
-# ci/cd
-
 
 

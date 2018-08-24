@@ -1,10 +1,12 @@
+[TOC]
+
 # 注册表
 
 `C:\Windows\regedit.exe`
 
 1. `HKEY_CLASSES_ROOT` 包含注册的所有OLE信息和文档类型，是从 `hkey_local_machine\software\classes`复制的。
 2. `HKEY_CURRENT_USER` 包含登录的用户配置信息，是从`hkey_users\`当前用户子
-  树复制的。
+    树复制的。
 3. `HKEY_LOCAL_MACHINE` 包含本机的配置信息。其中config子树是显示器打印机信息； enum子树是即插即用设备信息；system子树是设备驱动程序和服务参数的控制集合；software子树是应用程序专用设置。
 4. `HKEY_USERS` 所有登录用户信息。
 5. `HKEY_CURRENT_CONFIG` 包含常被用户改变的部分硬件软件配置，如字体设置、显示器类型、打印机设置等。是从`hkey_local_machine\config`复制的。
